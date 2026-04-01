@@ -47,15 +47,14 @@ export default function Hero() {
         {/* Left: Text */}
         <div className={styles.textSide}>
           <div className={styles.textInner}>
-            <span className={styles.eyebrow}>Psicoterapia online exclusiva para mujeres</span>
             <h1 className={styles.title}>
               Tu relación más importante
               <em> eres tú</em>
             </h1>
             <p className={styles.subtitle}>
               Mejora tus relaciones empezando por la tuya. Un espacio
-              terapéutico creado por y para mujeres que quieren conectar
-              con su yo auténtico.
+              terapéutico <strong>creado por y para mujeres</strong> que
+              quieren conectar con su yo auténtico.
             </p>
             <div className={styles.ctas}>
               <a

@@ -10,11 +10,11 @@ const STATS = [
   { end: 7, label: 'Países vividos' },
 ]
 
-function StatItem({ end, label, suffix }: { end: number; label: string; suffix?: string }) {
+function StatItem({ end, label }: { end: number; label: string }) {
   const { ref, count } = useCountUp(end)
   return (
     <div className={styles.stat} ref={ref}>
-      <strong>{count}{suffix}</strong>
+      <strong>{count}</strong>
       <span>{label}</span>
     </div>
   )
@@ -147,7 +147,7 @@ export default function About() {
 
         <div className={styles.stats}>
           {STATS.map(s => (
-            <StatItem key={s.label} end={s.end} label={s.label} suffix={s.suffix} />
+            <StatItem key={s.label} end={s.end} label={s.label} />
           ))}
         </div>
       </div>

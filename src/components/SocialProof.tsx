@@ -26,7 +26,7 @@ const TESTIMONIALS = [
 
 export default function SocialProof() {
   const { ref, isVisible } = useScrollAnimation()
-  const { ref: countRef, count } = useCountUp(150)
+  const { ref: countRef } = useCountUp(150)
 
   return (
     <section id="testimonios" className={styles.section} aria-label="Testimonios y comunidad">

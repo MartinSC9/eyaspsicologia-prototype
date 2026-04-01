@@ -1,17 +1,48 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { ArrowRight } from 'lucide-react'
 import styles from './Hero.module.css'
 
+const VIDEOS = [
+  '/images/hero-video-2.mp4',
+  '/images/hero-video-3.mp4',
+  '/images/hero-video-4.mp4',
+  '/images/hero-video-6.mp4',
+]
+
 export default function Hero() {
   const [loaded, setLoaded] = useState(false)
+  const [currentVideo, setCurrentVideo] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 100)
     return () => clearTimeout(timer)
   }, [])
 
+  const handleEnded = useCallback(() => {
+    setCurrentVideo((prev) => (prev + 1) % VIDEOS.length)
+  }, [])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load()
+      videoRef.current.play()
+    }
+  }, [currentVideo])
+
   return (
     <section id="inicio" className={styles.hero} aria-label="Sección principal">
+      <video
+        ref={videoRef}
+        className={styles.bgVideo}
+        autoPlay
+        muted
+        playsInline
+        onEnded={handleEnded}
+      >
+        <source src={VIDEOS[currentVideo]} type="video/mp4" />
+      </video>
+      <div className={styles.bgOverlay} />
       <div className={`${styles.content} ${loaded ? styles.loaded : ''}`}>
         {/* Left: Text */}
         <div className={styles.textSide}>

@@ -24,9 +24,19 @@ export default function TransformSection() {
 
   return (
     <section className={styles.section} aria-label="Transforma tu vida">
-      <div className="container" ref={ref}>
+      <div ref={ref}>
         {/* Top: Benefits band */}
         <div className={`${styles.benefitsBand} ${isVisible ? 'visible' : ''} fade-up`}>
+          <video
+            className={styles.bgVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/images/hero-video-6.mp4" type="video/mp4" />
+          </video>
+          <div className={styles.bgOverlay} />
           <span className={styles.accent}>descubre cómo...</span>
           <ul className={styles.benefitsList}>
             {BENEFITS.map((b, i) => (
@@ -43,7 +53,7 @@ export default function TransformSection() {
         </div>
 
         {/* Bottom: "Es para ti si..." */}
-        <div className={styles.reasonsGrid}>
+        <div className={`container ${styles.reasonsGrid}`}>
           <div className={`${styles.reasonsLeft} ${isVisible ? 'visible' : ''} slide-left`}>
             <div className={styles.imageWrap}>
               <img

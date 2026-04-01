@@ -60,7 +60,7 @@ export default function Contact() {
                 <Clock size={18} className={styles.infoIcon} />
                 <div>
                   <strong>Horario</strong>
-                  <span>Lun - Vie: 9:00 - 20:00</span>
+                  <span>Lun - Vie · Horario flexible</span>
                 </div>
               </div>
               <div className={styles.infoCard}>

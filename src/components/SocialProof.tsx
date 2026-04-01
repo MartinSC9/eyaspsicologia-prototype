@@ -2,6 +2,7 @@ import { Quote, Heart, ArrowRight } from 'lucide-react'
 import { useScrollAnimation, useCountUp } from '../hooks/useScrollAnimation'
 import styles from './SocialProof.module.css'
 
+// TODO: Reemplazar con testimonios reales verificados por Guada
 const TESTIMONIALS = [
   {
     name: 'Diana',
@@ -78,7 +79,7 @@ export default function SocialProof() {
             <div className={styles.communityContent}>
               <Heart size={28} className={styles.heartIcon} />
               <p className={styles.stat} ref={countRef}>
-                Somos más de <strong>{count}k</strong> mujeres queriendo conectar
+                Una comunidad de <strong>mujeres</strong> queriendo conectar
               </p>
               <h3 className={styles.communityTitle}>
                 Conecta hoy con{' '}

@@ -78,7 +78,7 @@ export default function Hero() {
                 <img src="/images/mamen.jpg" alt="" className={styles.miniAvatar} />
               </div>
               <span className={styles.trustText}>
-                +150k mujeres ya conectaron
+                Una comunidad de mujeres creciendo juntas
               </span>
             </div>
           </div>

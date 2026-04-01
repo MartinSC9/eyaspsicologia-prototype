@@ -1,36 +1,40 @@
-import { Heart, Brain, Lightbulb, MessageCircle, Users, ClipboardList, Video, UserCheck, ArrowRight } from 'lucide-react'
+import { Users, ClipboardList, Video, UserCheck, ArrowRight } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import FloatingShapes from './decorations/FloatingShapes'
 import styles from './ProgramaConecta.module.css'
 
 const PILLARS = [
-  { icon: Heart, title: 'Amor propio', color: 'var(--coral)', bg: 'var(--coral-glow)' },
-  { icon: Brain, title: 'Emociones', color: 'var(--purple-500)', bg: 'var(--purple-50)' },
-  { icon: Lightbulb, title: 'Pensamientos', color: 'var(--teal-400)', bg: 'var(--teal-50)' },
-  { icon: MessageCircle, title: 'Relaciones', color: 'var(--coral)', bg: 'var(--coral-glow)' },
+  { image: '/images/eyas-amor-propio.png', title: 'Amor propio' },
+  { image: '/images/eyas-emociones.png', title: 'Emociones' },
+  { image: '/images/eyas-pensamiento.png', title: 'Pensamientos' },
+  { image: '/images/eyas-relaciones.png', title: 'Relaciones' },
 ]
 
 const STRUCTURE = [
   {
     icon: Users,
+    image: '/images/eyas-sesion.png',
     title: 'Terapia grupal semanal',
-    description: 'Sesiones con otras 5 chicas y tu psicóloga especializada. La parte más vertebral del programa.',
+    description: 'Sesiones en grupo reducido con tu psicóloga especializada. La parte más vertebral del programa.',
     accent: 'var(--coral)',
   },
   {
     icon: ClipboardList,
+    image: '/images/eyas-libro.png',
     title: 'Ejercicios paso a paso',
     description: 'Prácticas basadas en investigación psicológica para desarrollar habilidades clave.',
     accent: 'var(--purple-400)',
   },
   {
     icon: Video,
+    image: '/images/eyas-video.png',
     title: 'Vídeos psico-educativos',
     description: 'Cada semana una habilidad crítica con videos que aceleran tu cambio interno.',
     accent: 'var(--teal-400)',
   },
   {
     icon: UserCheck,
+    image: '/images/eyas-sisters.png',
     title: 'Coaching por parejas',
     description: 'Sesión semanal con una sister para comunicación asertiva y profundización.',
     accent: 'var(--coral)',
@@ -54,7 +58,7 @@ export default function ProgramaConecta() {
             Conecta <em>contigo</em>
           </h2>
           <p className={styles.mainSubtitle}>
-            15 semanas de transformación. Un programa integral diseñado para que no
+            Un programa integral de transformación diseñado para que no
             dependas de una psicóloga por años y puedas conectar con tu interior rápidamente.
           </p>
         </div>
@@ -62,9 +66,7 @@ export default function ProgramaConecta() {
         <div className={`${styles.pillarsRow} ${isVisible ? 'visible' : ''} fade-up`} style={{ transitionDelay: '0.15s' }}>
           {PILLARS.map((p) => (
             <div key={p.title} className={styles.pillar}>
-              <div className={styles.pillarIcon} style={{ background: p.bg, color: p.color }}>
-                <p.icon size={24} />
-              </div>
+              <img src={p.image} alt={p.title} className={styles.pillarImage} />
               <span className={styles.pillarTitle}>{p.title}</span>
             </div>
           ))}
@@ -75,8 +77,8 @@ export default function ProgramaConecta() {
           <div className={`${styles.visual} ${isVisible ? 'visible' : ''} slide-left`}>
             <div className={styles.imageWrap}>
               <img
-                src="/images/programa.jpeg"
-                alt="Programa Conecta Contigo"
+                src="/images/programa-llamada.png"
+                alt="Sesión grupal online - Programa Conecta Contigo"
                 className={styles.programImage}
                 loading="lazy"
               />
@@ -128,11 +130,9 @@ export default function ProgramaConecta() {
               className={`${styles.card} ${isVisible ? 'visible' : ''} fade-up`}
               style={{ transitionDelay: `${0.3 + i * 0.1}s` }}
             >
+              <img src={c.image} alt={c.title} className={styles.cardImage} />
               <div className={styles.cardNumber} style={{ color: c.accent }}>
                 0{i + 1}
-              </div>
-              <div className={styles.cardIcon} style={{ color: c.accent }}>
-                <c.icon size={24} />
               </div>
               <h4 className={styles.cardTitle}>{c.title}</h4>
               <p className={styles.cardDesc}>{c.description}</p>

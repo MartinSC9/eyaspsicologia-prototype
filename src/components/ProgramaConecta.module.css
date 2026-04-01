@@ -75,6 +75,17 @@
   transition: transform var(--transition-base);
 }
 
+.pillarImage {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.pillar:hover .pillarImage {
+  transform: scale(1.1);
+}
+
 .pillar:hover .pillarIcon {
   transform: scale(1.1);
 }
@@ -259,6 +270,15 @@
 
 .cardIcon {
   margin-bottom: 0.75rem;
+}
+
+.cardImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  display: block;
 }
 
 .cardTitle {

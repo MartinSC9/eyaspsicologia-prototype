@@ -6,8 +6,8 @@ import styles from './About.module.css'
 const STATS = [
   { end: 4, label: 'Continentes' },
   { end: 8, label: 'Países' },
-  { end: 12, label: 'Años' },
-  { end: 150, label: 'Mil mujeres', suffix: 'k+' },
+  { end: 12, label: 'Años de experiencia' },
+  { end: 7, label: 'Países vividos' },
 ]
 
 function StatItem({ end, label, suffix }: { end: number; label: string; suffix?: string }) {
@@ -45,7 +45,7 @@ export default function About() {
           <div className={`${styles.visual} ${isVisible ? 'visible' : ''} slide-left`}>
             <div className={styles.imageWrap}>
               <img
-                src="/images/guada.png"
+                src="/images/guada-sonriendo.png"
                 alt="Guada - Psicóloga y fundadora de EYAS"
                 className={styles.photo}
                 loading="lazy"
@@ -57,22 +57,26 @@ export default function About() {
           <div className={`${styles.content} ${isVisible ? 'visible' : ''} slide-right`}>
             <span className={styles.label}>Conóceme</span>
             <h2 className={styles.title}>
-              Hola, soy <em>Guada</em>
+              ¿Por qué te <em>puedo ayudar?</em>
             </h2>
             <p className={styles.lead}>
-              Recuerdo en el último año de instituto, un día mirándome al espejo,
-              me prometí que no me iba a mentir más a mí misma en la vida. Fue la
-              primera vez que me conecté con mi yo real y la primera vez que empecé
-              a realizar un trabajo interno de reconexión.
+              Creo que nací con 17 años. Esa fue la primera vez que me conecté
+              con mi yo auténtico y me prometí no ignorarlo nunca más.
             </p>
             <p className={styles.description}>
-              Me interesaba tanto entenderme a mí y al mundo que empecé a estudiar
-              filosofía, y después del primer año me di cuenta de que tenía que compartir
-              eso. Que necesitaba hacerle saber al mundo lo increíble que era entenderse
-              a una misma, quererse, validarse y trabajar en mejorarte cada día.
+              Ahí empecé mi relación de amor conmigo misma y mi interés por el
+              mundo interno de las personas. Entendí que conectarnos con nuestro
+              auténtico yo es la manera de enamorarnos de nosotras. Con 17 ya
+              tenía la semilla de psicóloga y no lo sabía, pero poco a poco me di
+              cuenta de que tenía que compartir con el resto lo que estaba pasando
+              dentro de mí…
             </p>
             <p className={styles.description}>
-              Así que decidí estudiar psicología, y ahí empezó todo.
+              Hoy, con más de 12 años de experiencia trabajando como investigadora,
+              psicóloga y coach en 4 continentes y 8 países, habiendo sido profesora
+              y colaborado con universidades y con artículos publicados, quiero
+              ayudarte a conectar contigo misma a través de mi programa de
+              crecimiento personal.
             </p>
           </div>
         </div>

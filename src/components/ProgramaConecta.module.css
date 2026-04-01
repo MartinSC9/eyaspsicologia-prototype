@@ -1,0 +1,352 @@
+.section {
+  position: relative;
+  padding: var(--section-padding);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--coral);
+  margin-bottom: 0.75rem;
+}
+
+.mainTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.mainTitle em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.mainSubtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Pillars Row ── */
+.pillarsRow {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform var(--transition-base);
+}
+
+.pillar:hover {
+  transform: translateY(-4px);
+}
+
+.pillarIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: transform var(--transition-base);
+}
+
+.pillar:hover .pillarIcon {
+  transform: scale(1.1);
+}
+
+.pillarTitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: lowercase;
+}
+
+.pillarTitle::first-letter {
+  text-transform: uppercase;
+}
+
+/* ── Overview Grid ── */
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrap {
+  position: relative;
+}
+
+.programImage {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: var(--shadow-lg);
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+  background: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  animation: float 4s ease-in-out infinite;
+}
+
+.programLogo {
+  height: 30px;
+  width: auto;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Overview content */
+.overviewContent {}
+
+.philosophy {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 0.85rem;
+}
+
+.philosophy strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Horizontal timeline */
+.timelineRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+}
+
+.timelineLineH {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--coral), var(--purple-300), var(--teal-400));
+  border-radius: 2px;
+}
+
+.stepH {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.stepDotH {
+  position: absolute;
+  top: -1.25rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 2.5px solid var(--coral);
+  transform: translateY(-50%);
+}
+
+.stepH:nth-child(3) .stepDotH { border-color: var(--coral-light); }
+.stepH:nth-child(4) .stepDotH { border-color: var(--purple-300); }
+.stepH:nth-child(5) .stepDotH { border-color: var(--purple-400); }
+.stepH:nth-child(6) .stepDotH { border-color: var(--teal-400); }
+
+.stepLabelH {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Structure Section ── */
+.structureHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.structureTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.structureTitle em {
+  font-style: italic;
+  color: var(--coral);
+}
+
+.structureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardNumber {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  opacity: 0.12;
+  line-height: 1;
+}
+
+.cardIcon {
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ── CTA ── */
+.ctaWrap {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.05rem 2.5rem;
+  background: var(--coral);
+  color: white;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  border-radius: 100px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(240, 107, 86, 0.3);
+  color: white;
+}
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  .pillarsRow {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .visual {
+    justify-content: center;
+  }
+
+  .programImage {
+    max-width: 260px;
+  }
+
+  .floatingCard {
+    right: auto;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    animation: none;
+  }
+
+  .overviewContent {
+    text-align: center;
+  }
+
+  .timelineRow {
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stepLabelH {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .structureGrid {
+    grid-template-columns: 1fr;
+  }
+}

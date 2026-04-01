@@ -1,0 +1,24 @@
+.blob {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  animation: morphFloat 12s ease-in-out infinite;
+}
+
+@keyframes morphFloat {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(5deg) scale(1.03);
+  }
+  66% {
+    transform: rotate(-3deg) scale(0.97);
+  }
+}
+
+@media (max-width: 768px) {
+  .blob {
+    display: none;
+  }
+}

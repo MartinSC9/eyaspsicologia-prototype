@@ -1,0 +1,239 @@
+/* ── Episode Variant ── */
+.episode {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background: #282828;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.epCover {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.epCoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.epOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.spotifyLogo {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.epContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.epInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.epTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+}
+
+.epMeta {
+  font-size: 0.75rem;
+  color: #b3b3b3;
+}
+
+.epSave {
+  font-size: 0.72rem;
+  color: #b3b3b3;
+  margin-top: 0.25rem;
+}
+
+.epPlayer {
+  margin-top: auto;
+}
+
+.epProgress {
+  margin-bottom: 0.65rem;
+}
+
+.epProgressBar {
+  height: 4px;
+  background: #4d4d4d;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.epProgressFill {
+  width: 28%;
+  height: 100%;
+  background: #1DB954;
+  border-radius: 2px;
+}
+
+.epTimes {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #b3b3b3;
+  margin-top: 0.25rem;
+}
+
+.epControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  color: #b3b3b3;
+}
+
+.playBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+/* ── Show Variant ── */
+.show {
+  background: #282828;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.showHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3a3a3a 0%, #282828 100%);
+}
+
+.showCover {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.showInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.showType {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #b3b3b3;
+  display: block;
+}
+
+.showTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.showAuthor {
+  font-size: 0.72rem;
+  color: #b3b3b3;
+}
+
+.showActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.showPlay {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1DB954;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+.showIcon {
+  color: #b3b3b3;
+}
+
+.showEpisodes {
+  padding: 0.25rem 0;
+}
+
+.showEp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.showEp:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.showEpInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.showEpInfo strong {
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.showEpInfo span {
+  font-size: 0.68rem;
+  color: #b3b3b3;
+}
+
+.showEpPlay {
+  color: #b3b3b3;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .episode {
+    grid-template-columns: 140px 1fr;
+  }
+}

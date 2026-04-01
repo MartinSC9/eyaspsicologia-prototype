@@ -83,10 +83,12 @@
 }
 
 .title em {
-  display: block;
+  display: inline;
   font-style: italic;
   font-weight: 400;
-  color: var(--coral);
+  color: var(--text-primary);
+  background: linear-gradient(to top, var(--green-accent) 35%, transparent 35%);
+  padding: 0 0.15em;
 }
 
 .subtitle {
@@ -134,8 +136,8 @@
 }
 
 .ctaSecondary:hover {
-  color: var(--coral);
-  border-bottom-color: var(--coral);
+  color: var(--green-accent-dark);
+  border-bottom-color: var(--green-accent);
 }
 
 /* Trust bar */
@@ -154,7 +156,7 @@
   height: 34px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2.5px solid white;
+  border: 2.5px solid var(--green-accent);
   margin-left: -8px;
 }
 

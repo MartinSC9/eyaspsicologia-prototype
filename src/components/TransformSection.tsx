@@ -57,7 +57,7 @@ export default function TransformSection() {
           <div className={`${styles.reasonsLeft} ${isVisible ? 'visible' : ''} slide-left`}>
             <div className={styles.imageWrap}>
               <img
-                src="/images/guada.png"
+                src="/images/hero-guada.jpg"
                 alt="Guada - EYAS Psicología"
                 className={styles.image}
                 loading="lazy"

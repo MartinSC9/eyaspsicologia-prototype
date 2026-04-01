@@ -88,7 +88,7 @@ export default function Hero() {
         <div className={styles.imageSide}>
           <div className={styles.imageFrame}>
             <img
-              src="/images/hero-guada.jpg"
+              src="/images/guada-sonriendo.png"
               alt="Guada - Fundadora de EYAS Psicología"
               className={styles.heroImage}
             />

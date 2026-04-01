@@ -45,7 +45,7 @@ export default function About() {
           <div className={`${styles.visual} ${isVisible ? 'visible' : ''} slide-left`}>
             <div className={styles.imageWrap}>
               <img
-                src="/images/guada-sonriendo.png"
+                src="/images/guada.png"
                 alt="Guada - Psicóloga y fundadora de EYAS"
                 className={styles.photo}
                 loading="lazy"
